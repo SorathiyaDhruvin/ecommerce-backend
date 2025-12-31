@@ -45,7 +45,7 @@ exports.loginUser = async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
-     res.json({
+    res.json({
   success: true,
   message: "Login successful",
   token: generateToken(user._id),
@@ -56,6 +56,7 @@ exports.loginUser = async (req, res) => {
     role: user.role
   }
 });
+
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
