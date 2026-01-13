@@ -25,7 +25,7 @@ exports.SignupUser = async (req, res) => {
 
     res.status(201).json({
       success: true,                     // ✅ REQUIRED
-      message: "Registration successful",
+      message: "Signup successful",
       token: token,                      // ✅ REQUIRED
       user: {                            // ✅ REQUIRED
         _id: user._id,
